@@ -47,6 +47,6 @@ jobs:
 
     - name: SSH into VM and run kubectl commands
       run: |
-        ssh gary@35.228.193.49
+        ssh -i gary@35.228.193.49
         
         
