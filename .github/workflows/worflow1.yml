@@ -37,15 +37,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
     - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.5.2
-      with: |
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }} 
-        ssh-known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-    - name: SSH into VM 
-      run: ssh github@35.228.24.182
-        
-        
+      uses: garygrossgarten/github-action-ssh@releas
+      with:
+          command: ls -a
+          host: ${{ secrets.SSH_KNOWN_HOSTS }}
+          username: github
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY}}
