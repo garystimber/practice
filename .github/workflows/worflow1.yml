@@ -38,7 +38,7 @@ jobs:
     
     steps:
     - name: Setup SSH
-      uses: garygrossgarten/github-action-ssh@releas
+      uses: garygrossgarten/github-action-ssh@release
       with:
           command: ls -a
           host: ${{ secrets.SSH_KNOWN_HOSTS }}
