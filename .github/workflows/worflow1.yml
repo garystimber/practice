@@ -37,10 +37,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Setup SSH
-      uses: garygrossgarten/github-action-ssh@release
-      with:
-          command: ls -a
-          host: ${{ secrets.SSH_KNOWN_HOSTS }}
-          username: github
-          privateKey: ${{ secrets.SSH_PRIVATE_KEY}}
+          - name: SSH Action
+            uses: invi5H/ssh-action@v1.0.0
+
