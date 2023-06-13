@@ -45,6 +45,6 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: SSH into VM 
-      run: ssh vm@35.228.24.182
+      run: ssh github@35.228.24.182
         
         
