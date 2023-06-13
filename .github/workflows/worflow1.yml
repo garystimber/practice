@@ -39,4 +39,9 @@ jobs:
     steps:
           - name: SSH Action
             uses: invi5H/ssh-action@v1.0.0
-
+          - id: ssh
+            uses: invi5H/ssh-action@v1
+            with:
+              SSH_USER: github
+              SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          - run: ssh pwd
