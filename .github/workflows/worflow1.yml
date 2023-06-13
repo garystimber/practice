@@ -44,9 +44,8 @@ jobs:
       uses: webfactory/ssh-agent@v0.5.2
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        ssh-known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
     - name: SSH into VM and run kubectl commands
       run: |
-        ssh vm@35.228.24.182
+        ssh gary@35.228.24.182
         
         
