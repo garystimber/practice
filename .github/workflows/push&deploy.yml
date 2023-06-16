@@ -44,5 +44,4 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         run: |
-        docker pull garystimber/myapp:master
-        kubectl rollout status deployment/nginx-deployment
+          kubectl rollout status deployment/nginx-deployment
