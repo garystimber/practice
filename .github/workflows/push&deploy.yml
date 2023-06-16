@@ -44,4 +44,5 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         run: |
-          kubectl rollout status deployment/nginx-deployment
+          kubectl delete deployment nginx-deployment
+          kubectl apply -f /home/nginx/deployment.yml
