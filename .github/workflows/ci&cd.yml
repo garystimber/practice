@@ -48,7 +48,8 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           docker pull docker.io/garystimber/myapp:master
-          kubectl set image deployments/nginx-deployment web=docker.io/garystimber/myapp:master
+          kubectl set image deployments/nginx-deployment web=garystimber/myapp:master
           curl hello-world.info
 
 
+  
