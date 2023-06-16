@@ -50,6 +50,7 @@ jobs:
           docker pull docker.io/garystimber/myapp:master
           kubectl set image deployments/nginx-deployment web=garystimber/myapp:master
           curl hello-world.info
+          kubectl rollout status deployment/nginx-deployment
 
 
   
