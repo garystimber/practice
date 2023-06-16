@@ -44,5 +44,6 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         run: |
+          docker pull garystimber/myapp:master
           kubectl delete deployment nginx-deployment
           kubectl apply -f /home/nginx/deployment.yml
