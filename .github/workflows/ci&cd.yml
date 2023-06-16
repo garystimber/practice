@@ -5,7 +5,7 @@ on:
 
 jobs:
 
-  build&push:
+  buildandpush:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
@@ -36,7 +36,7 @@ jobs:
 
 
   deploy:
-    needs: build&push
+    needs: buildandpush
     name: deploy
     runs-on: ubuntu-latest
     steps:
