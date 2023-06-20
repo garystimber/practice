@@ -52,5 +52,9 @@ jobs:
           kubectl rollout status deployment/nginx-deployment
           kubectl apply -f /home/nginx/deployment.yml
 
+          cd /home/kuber-samples
+          sudo git checkout
+          sudo git pull
+
 
   
