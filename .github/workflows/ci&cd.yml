@@ -51,6 +51,7 @@ jobs:
           kubectl set image deployments/nginx-deployment web=garystimber/myapp:master
           kubectl rollout status deployment/nginx-deployment
           
+          cd /home/kuber-samples
           sudo git checkout
           sudo git pull origin
           kubectl apply -f /home/kuber-samples/manifest
