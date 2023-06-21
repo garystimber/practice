@@ -54,7 +54,8 @@ jobs:
 
           cd /home/kuber-samples
           sudo git checkout
-          sudo git pull
+          sudo git pull origin
+          kubectl apply -f /home/kuber-samples
 
 
   
